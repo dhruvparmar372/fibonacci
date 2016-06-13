@@ -1,0 +1,92 @@
+html { box-sizing : border-box; }
+*, *::before, *::after { box-sizing : inherit; }
+
+
+body {
+  height : 100%; 
+  margin : 0;
+  background: #2ecc71;
+}
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.clearfix::after {
+  content : " ";
+  display : table;
+  clear   : both;
+}
+
+
+input {
+  border : 0;
+  outline : 0;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  display: block;
+  margin: 50px auto 0;
+  background: #fcfcfc;
+  border-radius: 4px;
+  padding: 4px 10px; 
+  width: 250px;
+  text-align: center;
+}
+
+#start-button {
+  border : 0;
+  outline : 0; 
+  background: #27ae60;
+  border-radius: 4px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  display: block;
+  margin: 10px auto 0;
+  width: 250px;
+  color : #fff;
+  border : 1px solid transparent;
+}
+#start-button:hover {
+  border-color : #1f8a4c;
+}
+
+#fibonacci-stage {
+  margin: 10px;
+}
+#fibonacci-stage.complete {
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border : 1px solid #27ae60;
+  border-radius: 2px;
+  color : #27ae60;
+  font-size: 14px;
+}
+
+
+.fib-child {
+  width : 48%;
+  float : left;
+  border : 1px solid #27ae60;
+  text-align: center;
+  font-size: 14px;
+  color : #27ae60;
+  background: #fff;
+  padding: 5px;
+  border-radius: 2px;
+  margin: 10px 1.33%;
+  transition : transform 0.25s ease-in-out;
+  transform : translateX(0);
+}
+.fib-child.initial:first-child { 
+  transform : translateX(10%); 
+  border-right: 0;
+}
+.fib-child.initial:last-child { 
+  transform : translateX(-10%); 
+  border-left : 0;
+}
+
+.fib-child:first-child {
+  margin-right: 0;
+}
