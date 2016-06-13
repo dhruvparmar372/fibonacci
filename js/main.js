@@ -31,7 +31,7 @@ var Fibonacci = function (options) {
         },10)
         setTimeout(function () {
           resolve()
-        }, 3000)
+        }, 1200)
       });
       
       return renderPromise.then(function () {
@@ -44,7 +44,7 @@ var Fibonacci = function (options) {
             setTimeout(function () {
               element.innerHTML = data[0]+data[1];
               resolve(data[0]+data[1]);
-            }, 3000);
+            }, 1200);
           })
         });  
       })
